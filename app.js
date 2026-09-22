@@ -67,6 +67,12 @@ app.get('/recommended', (req, res) => {
     res.render('recommended', { state, head});
     console.log('recommended')
   });
+app.get('/index', (req, res) => {
+    state={home : true}
+    head={title:"Home - Week 1"}
+    res.render('index', { state, head});
+    console.log('index')
+  });
 
 
 // Start the server
