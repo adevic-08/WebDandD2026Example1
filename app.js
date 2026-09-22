@@ -52,6 +52,22 @@ app.get('/contact', (req, res) => {
     console.log('contact')
   });
 
+  // contact route
+app.get('/minimum', (req, res) => {
+    state={minimum : true}
+    head={title:"Minimum Requirements - Week 1"}
+    res.render('minimum', { state, head});
+    console.log('minimum')
+  });
+
+  // contact route
+app.get('/recommended', (req, res) => {
+    state={recommended : true}
+    head={title:"Recommended Requirements - Week 1"}
+    res.render('recommended', { state, head});
+    console.log('recommended')
+  });
+
 
 // Start the server
 app.listen(3000, () => {
