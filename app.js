@@ -74,7 +74,12 @@ app.get('/index', (req, res) => {
     console.log('index')
   });
 
-
+app.get('/responsiveexample', (req, res) => {
+    state={responsiveexample : true}
+    head={title:"Responsive Example - Week 1"}
+    res.render('responsiveexample', { state, head});
+    console.log('responsiveexample')
+});
 // Start the server
 app.listen(3000, () => {
   console.log('Server is running on port 3000');
